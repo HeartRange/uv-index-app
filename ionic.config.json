@@ -1,0 +1,7 @@
+{
+  "name": "uv-index-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
