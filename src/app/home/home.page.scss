@@ -1,27 +1,65 @@
-#container {
+
+h1{
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: #292831;
+}
+ion-title {
+
+  color: #292831;
+}
+ion-card{
+  box-shadow:#f3f3f3 !important;
+  width: 100%;
+  padding:2px;
+}
+ion-card-title {
+  color: #292831;
+  font-size: 0.8rem;
+}
+ion-card-content{
+  color: #292831;
+  font-size: 2rem;
+}
+swiper-container{
+  width: 80%;
+  height: 40%;
+  background-color: #eceff1;
+  border-style: solid;
+  border-color: #e4e4e4;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+swiper-slide {
+  color: #292831;
+  font-size: 0.7rem;
+  padding-top: 1.7rem;
+  
+}
+#uvResult {
+  width: 100%;
+  padding: 10%;
+}
+ion-col{
+  display:flex;
+  justify-content: center;
+  padding: 4px;
+}
+ion-row{
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#hot {
+  background-color: rgb(254, 104, 71);
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#cold {
+  background-color: #bbd0e7;
 }
-
-#container a {
-  text-decoration: none;
+#uvResultText{
+  font-size: 2rem;
+}
+ion-content{
+  --background:linear-gradient(0deg, rgba(208,208,247,1) 0%, rgba(101,175,242,1) 100%);
 }

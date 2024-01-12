@@ -1,20 +1,84 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Moet ik zonnebrand op?
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+    <ion-toolbar color="primary">
+      <ion-title size="large">Moet ik zonnebrand op?</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card id="cold">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="partly-sunny-outline"></ion-icon>UV index op het huidige tijdstip van de dag
+            </ion-card-title>          
+          </ion-card-header>
+          <ion-card-content>
+            {{this.uvData?.result.uv}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card id="hot">
+          <ion-card-header>
+            <ion-card-title>
+              <ion-icon name="sunny-outline"></ion-icon>UV index op het heetste moment van de dag
+            </ion-card-title>          
+          </ion-card-header>
+          <ion-card-content>
+            {{this.uvData?.result.uv_max}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-card id="uvResult">
+          <ion-card-title id="uvResultText">
+            {{this.uvResult?.advice}}
+          </ion-card-title>
+        </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>Weetjes over zonnebrand <ion-icon name="bulb-outline" aria-hidden="true"></ion-icon></h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <swiper-container [loop]="true" [pagination]="true">
+    <swiper-slide>Er zijn 2 soorten UV zonnestralen: UVB en UVA.
+                  <br>
+                  <br>
+                  De meest bekende is de UVB variant. UVB zorgt voornamelijk voor zonnebrand en is hoofdverantwoordelijke voor huidkanker door de zon. De straling die het meeste zorgt voor de veroudering van de huid en voor onder andere hyperpigmentatie, is UVA. UVA kan ook de huid verbranden, maar doet dat een stuk langzamer.
+    </swiper-slide>
+    <swiper-slide>Bijna iedereen kent de SPF factor, maar wist u ook dat er nog een ander factor is?
+                  <br>
+                  <br>
+                  Die factor wordt op zonnebrandfles weergeven als: PPD, PA of Boots star rating. Deze factor laat zien
+                  hoe goed de zonnebrand beschermt tegen UVA zonnestralen.
+    </swiper-slide>
+    <swiper-slide>Hoe verschillen de UVB en UVA straling wetenschappelijk gezien?
+                  <br>
+                  <br>
+                  UVB straling heeft een kortere golflengte. Dit betekent dat het niet zo diep in de huid gaan. Echter op het huidoppervlak, is de straling zeer destructief. UVA heeft een langere golflengte. Deze straling heeft dan ook minder brandkracht, maar UVA gaat wel dieper de huid in.
+    </swiper-slide>
+    <swiper-slide>Wist u dat u binnen en buiten in de schaduw niet 100% veilig bent van de zon?
+                  <br>
+                  <br>
+                  Naast blootstelling aan direct zonlicht bestaat er ook indirecte blootstelling. Zonnestralen weerkaatsen zichzelf op voorwerpen en raken uw huid nog steeds. Dit is echter veel minder sterk en bij elk extra object in de weg, worden de zonnestralen slapper. Ramen blokkeren UV voor u binnen niet helemaal. UVB stralen worden wel geblokkeerd door een raam. UVA stralen worden voor maar ongeveer een derde geblokkeerd. Als er een hoge UV index is en u helemaal binnen veilig wilt zijn, is het aangeraden om minimaal 3 meter van het raam af te zitten.
+    </swiper-slide>
+    <swiper-slide>Wist u dat de zon racistisch is?
+                  <br>
+                  <br>
+                  Hoe lichter uw huidskleur, hoe meer gevoelig u in algemeenheid bent voor de zon. Dit betekent niet dat als u een donkere huidskleur hebt, u immuun bent. Bij hogere UV indexen loopt u altijd nog het risico om hyperpigmentatie of huidkanker op te lopen. Als u een hele lichte huidskleur hebt is het aangeraden om al zonnebrand te gebruiken bij UV index 1-2. Een donkere huidskleur daarentegen bij UV index 3-4. Het hangt er ook vanaf hoelang u in de zon blijft. Korte blootstelling aan de zon kan zelfs goed zijn om bijvoorbeeld vitamine D aan te maken. In noordelijke landen met lage UV index komt vitamine D tekort veel voor, vooral tijdens de wintertijden.
+    </swiper-slide>
+  </swiper-container>
 </ion-content>

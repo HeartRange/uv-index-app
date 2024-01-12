@@ -2,7 +2,11 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); 
 :root {
+  --ion-font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  text-align: center;
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -153,7 +157,10 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
+    --ion-background:linear-gradient(0deg, rgba(208,208,247,1) 0%, rgba(101,175,242,1) 100%);
+    --ion-font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    text-align: center;
     --ion-background-color-rgb: 0,0,0;
 
     --ion-text-color: #ffffff;
@@ -197,7 +204,10 @@
    */
 
   .md body {
-    --ion-background-color: #121212;
+    --ion-background:linear-gradient(0deg, rgba(208,208,247,1) 0%, rgba(101,175,242,1) 100%);
+    --ion-font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    text-align: center;
     --ion-background-color-rgb: 18,18,18;
 
     --ion-text-color: #ffffff;
@@ -227,11 +237,11 @@
 
     --ion-item-background: #1e1e1e;
 
-    --ion-toolbar-background: #1f1f1f;
+    --ion-toolbar-background: #eceff1;
 
-    --ion-tab-bar-background: #1f1f1f;
+    --ion-tab-bar-background: #ffffff;
 
-    --ion-card-background: #1e1e1e;
+    --ion-card-background: #eceff1;
   }
 }
 
